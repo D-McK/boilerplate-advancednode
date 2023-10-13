@@ -8,7 +8,9 @@ async function main(callback) {
 
     try {
         // Connect to the MongoDB cluster
+        console.log('trying to connect');
         await client.connect();
+        console.log('successfully connected');
 
         // Make the appropriate DB calls
         await callback(client);
